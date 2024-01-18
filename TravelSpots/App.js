@@ -1,14 +1,64 @@
-import { View, Text, Image} from "react-native";
+import { View, Text, Image, StyleSheet, StatusBar, SafeAreaView, ScrollView } from "react-native";
 
 export default function App() {
   return (
-    <View style={{ padding: 40 }}>
-      <Image 
-        source={{ uri:"https://www.milford-sound.co.nz/wp-content/uploads/2017/05/Milford-Sound-reflection.jpg" }}
-        style={{ height:300, width: 300 }}
-      ></Image>
-      <Text>Milford Sound</Text>
-      <Text>Fiordland National Park, New Zealand</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <ScrollView>
+        <StatusBar backgroundColor="black" barStyle="light-content"></StatusBar>
+        <View style={styles.card}>
+          <Image 
+            source={{ uri:"https://www.milford-sound.co.nz/wp-content/uploads/2017/05/Milford-Sound-reflection.jpg" }}
+            style={styles.picture}
+          ></Image>
+          <Text style={styles.cardTitle}>Milford Sound</Text>
+          <Text style={styles.cardLocation}>Fiordland National Park, New Zealand</Text>
+        </View>
+        <View style={styles.card}>
+          <Image 
+            source={{ uri:"https://www.milford-sound.co.nz/wp-content/uploads/2017/05/Milford-Sound-reflection.jpg" }}
+            style={styles.picture}
+          ></Image>
+          <Text style={styles.cardTitle}>Milford Sound</Text>
+          <Text style={styles.cardLocation}>Fiordland National Park, New Zealand</Text>
+        </View>
+        <View style={styles.card}>
+          <Image 
+            source={{ uri:"https://www.milford-sound.co.nz/wp-content/uploads/2017/05/Milford-Sound-reflection.jpg" }}
+            style={styles.picture}
+          ></Image>
+          <Text style={styles.cardTitle}>Milford Sound</Text>
+          <Text style={styles.cardLocation}>Fiordland National Park, New Zealand</Text>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f5f5f5',
+    paddingTop: StatusBar.currentHeight,
+    padding: 10,    
+  },
+  card: {
+    backgroundColor: "white",
+    padding: 10,
+    borderRadius: 10,
+    borderWidth: 1,
+    marginBottom: 10,
+    borderColor: "grey"
+  },
+  picture: {
+    justifyContent: "center",
+    height: 350,
+    width: 350,
+  },
+  cardTitle: {
+    fontSize: 20,
+    fontWeight: "bold"
+  },
+  cardLocation: {
+    fontSize: 15,
+  }
+})
