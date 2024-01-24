@@ -29,6 +29,22 @@ export default function App() {
           <Text style={styles.cardTitle}>Milford Sound</Text>
           <Text style={styles.cardLocation}>Fiordland National Park, New Zealand</Text>
         </View>
+        <View style={styles.card}>
+          <Image 
+            source={{ uri:"https://www.milford-sound.co.nz/wp-content/uploads/2017/05/Milford-Sound-reflection.jpg" }}
+            style={styles.picture}
+          ></Image>
+          <Text style={styles.cardTitle}>Milford Sound</Text>
+          <Text style={styles.cardLocation}>Fiordland National Park, New Zealand</Text>
+        </View>
+        <View style={styles.card}>
+          <Image 
+            source={{ uri:"https://www.milford-sound.co.nz/wp-content/uploads/2017/05/Milford-Sound-reflection.jpg" }}
+            style={styles.picture}
+          ></Image>
+          <Text style={styles.cardTitle}>Milford Sound</Text>
+          <Text style={styles.cardLocation}>Fiordland National Park, New Zealand</Text>
+        </View>
       </ScrollView>
     </SafeAreaView>
   )
@@ -50,9 +66,9 @@ const styles = StyleSheet.create({
     borderColor: "grey"
   },
   picture: {
-    justifyContent: "center",
     height: 350,
     width: 350,
+    resizeMode: "contain"
   },
   cardTitle: {
     fontSize: 20,
