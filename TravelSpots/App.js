@@ -1,5 +1,6 @@
 import { View, Text, Image, StyleSheet, StatusBar, SafeAreaView, ScrollView, SectionList } from "react-native";
 import travelSpotsList from './travelspots.json'
+import travelSpotsByCountry from './travelspots2.json'
 
 export default function App() {
   return (
