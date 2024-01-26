@@ -60,5 +60,10 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     fontSize: 24,
     fontWeight: "bold"
+  },
+  renderCountryHeader: {
+    backgroundColor: "white",
+    fontSize: 20,
+    fontWeight: "bold"
   }
 })
